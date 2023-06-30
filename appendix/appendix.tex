@@ -1,0 +1,42 @@
+
+%根据word和latex的中文行间距转化公式 1.25*1.3/1.2
+\renewcommand{\baselinestretch}{1.345}
+\fontsize{12pt}{14.4pt}\selectfont
+\phantomsection
+\chapter*{附~~~~录}
+
+\addcontentsline{toc}{chapter}{\fHei 附录}
+写一下附录，我这里表格就不改了大家可以参考写自己的表格
+\begin{table}[!ht]
+	\centering
+	\caption{脑机接口工具箱接口对照表}\label{label2}
+	\setlength{\tabcolsep}{5mm}
+	{
+		\begin{tabular}{|c|c|c|}
+			\hline
+			模块                     & 函数              & 函数功能                                                      \\ \hline
+			\multirow{4}{*}{图像预处理} & pop\_eegfiltnew & 对数据进行滤波                                                   \\ \cline{2-3} 
+			& pop\_epoch      & 对二维数据根据事件信息进行分段                                           \\ \cline{2-3} 
+			& pop\_rmbase     & 对分段数据基线校正                                                 \\ \cline{2-3} 
+			& pop\_resample   & 对分段数据及进行降采样                                               \\ \hline
+			\multirow{4}{*}{特征提取}  & LMD             & 对分段数据提取LMD特征                                              \\ \cline{2-3} 
+			& WPD             & 对分段数据提取WPD特征                                              \\ \cline{2-3} 
+			& AR              & 对分段数据提取AR特征                                               \\ \cline{2-3} 
+			& CSP             & 对分段数据提取CSP特征投影矩阵                                          \\ \hline
+			\multirow{2}{*}{分类器}   & SVM             & 训练支持向量机 \\ \cline{2-3} 
+			& multSVM         & 训练基于一对多的多分类支持向量机                          \\ \hline
+			\multirow{7}{*}{深度学习}  & myResNet18      & 训练ResNet网络                                                \\ \cline{2-3} 
+			& myResNet50      & 训练ResNet50网络                                              \\ \cline{2-3} 
+			& myshuffleNet    & 训练shuffleNet网络                                            \\ \cline{2-3} 
+			& mySqeezeNet     & 训练SqueezeNet网络                                            \\ \cline{2-3} 
+			& myAlexNet       & 训练AlexNet网络                                               \\ \cline{2-3} 
+			& myEEGNet        & 训练EEGNet网络                                                \\ \cline{2-3} 
+			& mySingleCNN     & 训练SingleCNN网络                                             \\ \hline
+			\multirow{2}{*}{其他}    & getresult       & 生成相关评估数据，并绘制混淆矩阵图                                         \\ \cline{2-3} 
+			& one\_hot        & 根据多标签数据生成one\_hot数据标签集                                    \\ \hline
+		\end{tabular}
+	}
+\end{table}
+
+\clearpage
+\endinput

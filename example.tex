@@ -1,0 +1,93 @@
+\documentclass[12pt,a4paper,openany,oneside,UTF8]{book}
+
+% 格式控制
+%\usepackage[ansi]{inputenc}
+\input{settings/thesis-setting}
+% 非格式控制插件
+% \usepackage{math-symbols}
+% \usepackage{plug-ins/math-symbols}
+\input{plug-ins/aerocoeffs}
+
+% 插图目录
+\graphicspath{{figures/}}
+
+%核心就是下面三段代码
+\usepackage{amsmath}
+\usepackage{float}
+\numberwithin{equation}{section}%公式按章节编号
+\numberwithin{figure}{section}%图表按章节编号
+%\setCJKmainfont[AutoFakeBold=2.7]{\Sog}
+\begin{document}
+
+
+\sloppy
+
+\pagenumbering{Roman}
+
+% 封皮
+\frontmatter
+\input{settings/cover.tex}
+%\clearpage
+%\thispagestyle{empty}\textbf{}
+%\phantom{s}
+%\clearpage
+%\includepdf{preface/tasklist.pdf}
+%\newpage
+%\clearpage
+%\thispagestyle{empty}
+%\phantom{s}
+%\clearpage
+
+\setcounter{page}{1}
+\pagenumbering{Roman}
+
+
+%根据word和latex的中文行间距转化公式 1.25*1.15/1.2
+\renewcommand{\baselinestretch}{1.345}
+
+% 中文摘要
+\include{preface/c_abstract}
+% 英文摘要
+\include{preface/e_abstract}
+
+\renewcommand{\baselinestretch}{1.354}
+\fontsize{12pt}{12pt}\selectfont
+\phantomsection
+%\addcontentsline{toc}*{\fHei}
+\tableofcontents
+\clearpage
+
+\mainmatter
+\sHalfXiaosi\fSong
+
+% 正文内容
+\titleformat{\chapter}[hang]{\normalfont\sSanhao\filcenter\fHei\bf}%
+{\sSanhao{\chaptertitlename}}{1em}{\sSanhao}
+\input{chapters/chapter01.tex}
+\input{chapters/chapter02.tex}
+\input{chapters/chapter04.tex}
+% 参考文献设置
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{\fHei 参考文献}
+\sSihao 
+% npu专用
+
+\bibliographystyle{settings/nputhesis}
+
+
+% 参考文献位置
+\begin{spacing}{1.345} 
+\bibliography{references/reference}
+  \end{spacing} 
+
+% 附录
+\backmatter
+\input{appendix/acknowledgements.tex}
+\input{appendix/design-conclusion.tex}
+\input{appendix/appendix.tex}
+
+\clearpage
+\end{document}
+
+
