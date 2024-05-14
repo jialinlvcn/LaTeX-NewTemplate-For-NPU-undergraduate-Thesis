@@ -46,8 +46,8 @@ LuaLatex命令:
 ## 相关问题
 ### 关于编译问题
 建议使用xelatex进行编译
-### 关于文字比word版本细的问题
-这个问题是由于latex文字渲染和word存在不同，质量不如word，建议使用Abode Acrobat重新打印一遍。
+### **关于文字比word版本细的问题**
+这个问题是由于latex文字渲染和word存在不同，质量不如word，强烈建议在答辩前或提交前使用Abode Acrobat重新PDF打印一遍。
 
 ## 更新
 - 2024.5.14 感谢@ouanneuzerl的PR，加入了添加了插图和表格列表的格式说明
