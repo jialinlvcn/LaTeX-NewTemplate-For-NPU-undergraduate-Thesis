@@ -149,6 +149,9 @@
 \renewcommand\theequation{\thesection.\arabic{equation}}
 \renewcommand{\thefigure}{\thechapter-\arabic{figure}}
 \renewcommand{\thetable}{\thechapter-\arabic{table}}
+%将\listoffigures和\listoftables的标题改为中文，可以在附录中直接使用这两个命令生成图片列表和表格列表
+\renewcommand{\listfigurename}{插图列表}
+\renewcommand{\listtablename}{表格列表}
 
 \usepackage{float}
 \setlength{\textfloatsep}{25pt plus 1.0pt minus 2.0pt}
