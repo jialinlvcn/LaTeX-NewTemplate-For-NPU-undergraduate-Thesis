@@ -1,6 +1,6 @@
 # LaTeX-NewTemplate-For-NPU-Thesis
 ## 西北工业大学本科毕业设计新版本模板改动说明
- 西北工业大学本科毕业设计新版本模板，根据https://github.com/polossk/LaTeX-Template-For-NPU-Thesis进行了调整
+ 西北工业大学本科毕业设计新版本模板，根据 https://github.com/polossk/LaTeX-Template-For-NPU-Thesis 进行了调整
 具体调整内容如下：
 1. 修改了页眉页脚位置
 2. 修复了行间距latex和word之间1.25倍行距的不同
@@ -13,7 +13,7 @@
 
 阿里云镜像: https://mirrors.aliyun.com/CTAN/systems/texlive/Images/texlive.iso?spm=a2c6h.25603864.0.0.659d7002YwKsKh
 
-加载iso文件，点击install-tl-windows.bat安装texlive环境即可。可以修改安装环境目录例如C:\texlive\2024
+加载`.iso`文件，点击`install-tl-windows.bat`安装texlive环境即可。可以修改安装环境目录例如`C:\texlive\2024`
 
 一路确定即可安装
 
