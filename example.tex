@@ -1,22 +1,12 @@
 \documentclass[12pt,a4paper,openany,oneside,UTF8]{book}
 
 % 格式控制
-%\usepackage[ansi]{inputenc}
 \input{settings/thesis-setting}
 % 非格式控制插件
-% \usepackage{math-symbols}
-% \usepackage{plug-ins/math-symbols}
 \input{plug-ins/aerocoeffs}
 
 % 插图目录
 \graphicspath{{figures/}}
-
-%核心就是下面三段代码
-\usepackage{amsmath}
-\usepackage{float}
-\numberwithin{equation}{section}%公式按章节编号
-\numberwithin{figure}{section}%图表按章节编号
-%\setCJKmainfont[AutoFakeBold=2.7]{\Sog}
 \begin{document}
 
 
@@ -27,16 +17,6 @@
 % 封皮
 \frontmatter
 \input{settings/cover.tex}
-%\clearpage
-%\thispagestyle{empty}\textbf{}
-%\phantom{s}
-%\clearpage
-%\includepdf{preface/tasklist.pdf}
-%\newpage
-%\clearpage
-%\thispagestyle{empty}
-%\phantom{s}
-%\clearpage
 
 \setcounter{page}{1}
 \pagenumbering{Roman}
@@ -53,7 +33,6 @@
 \renewcommand{\baselinestretch}{1.354}
 \fontsize{12pt}{12pt}\selectfont
 \phantomsection
-%\addcontentsline{toc}*{\fHei}
 \tableofcontents
 \clearpage
 
@@ -72,10 +51,7 @@
 \addcontentsline{toc}{chapter}{\fHei 参考文献}
 \sSihao 
 % npu专用
-
 \bibliographystyle{settings/nputhesis}
-
-
 % 参考文献位置
 \begin{spacing}{1.345} 
 \bibliography{references/reference}

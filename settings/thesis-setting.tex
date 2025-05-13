@@ -89,6 +89,7 @@
 \usepackage{fontspec}
 \usepackage[SlantFont,BoldFont,CJKchecksingle]{xeCJK}
 \usepackage{CJKnumb}
+
 % 使用 Adobe 字体
 \newcommand\adobeSog{SimSun}
 \newcommand\adobeHei{SimHei}
@@ -147,6 +148,11 @@
 \newcommand{\ucite}[1]{$^{\mbox{\scriptsize \cite{#1}}}$}
 \renewcommand\arraystretch{1.4}
 \renewcommand\theequation{\thesection.\arabic{equation}}
+
+\usepackage{amsmath}
+\usepackage{float}
+\numberwithin{equation}{section}%公式按章节编号
+\numberwithin{figure}{section}%图表按章节编号
 \renewcommand{\thefigure}{\thechapter-\arabic{figure}}
 \renewcommand{\thetable}{\thechapter-\arabic{table}}
 %将\listoffigures和\listoftables的标题改为中文，可以在附录中直接使用这两个命令生成图片列表和表格列表
