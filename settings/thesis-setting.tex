@@ -138,36 +138,6 @@
 %------------------------------------------------------------------------------%
 
 
-%---------------------------------设置引用格式---------------------------------%
-\renewcommand\figureautorefname{图}
-\renewcommand\tableautorefname{表}
-\renewcommand\equationautorefname{式}
-\newcommand\myreference[1]{[\ref{#1}]}
-\newcommand\eqrefe[1]{式(\ref{#1})}
-% 增加 \ucite 命令使显示的引用为上标形式
-\newcommand{\ucite}[1]{$^{\mbox{\scriptsize \cite{#1}}}$}
-\renewcommand\arraystretch{1.4}
-\renewcommand\theequation{\thesection.\arabic{equation}}
-
-\usepackage{amsmath}
-\usepackage{float}
-\numberwithin{equation}{section}%公式按章节编号
-\numberwithin{figure}{section}%图表按章节编号
-\renewcommand{\thefigure}{\thechapter-\arabic{figure}}
-\renewcommand{\thetable}{\thechapter-\arabic{table}}
-%将\listoffigures和\listoftables的标题改为中文，可以在附录中直接使用这两个命令生成图片列表和表格列表
-\renewcommand{\listfigurename}{插图列表}
-\renewcommand{\listtablename}{表格列表}
-
-\usepackage{float}
-\setlength{\textfloatsep}{25pt plus 1.0pt minus 2.0pt}
-\setlength{\floatsep}{25pt plus 1.0pt minus 2.0pt}
-\setlength{\intextsep}{25pt plus 1.0pt minus 2.0pt}
-
-\setlength{\bibsep}{0em} % 设置参考文献条目间的距离
-%------------------------------------------------------------------------------%
-
-
 %--------------------------------设置定理类环境--------------------------------%
 \usepackage[amsthm,thmmarks]{ntheorem}
 \newtheorem{myexample}{例}
@@ -308,6 +278,38 @@
 \lstloadlanguages{% Check Dokumentation for further languages, page 12
     Pascal, C++, Java, Ruby, Python, Matlab, R, Haskell
 }
+%------------------------------------------------------------------------------%
+
+%---------------------------------设置引用格式---------------------------------%
+\renewcommand\figureautorefname{图}
+\renewcommand\tableautorefname{表}
+\renewcommand\equationautorefname{式}
+\newcommand\myreference[1]{[\ref{#1}]}
+\newcommand\eqrefe[1]{(\ref{#1})} % 引用时显示为 "式(1-2-3)"
+\newcommand{\ucite}[1]{$^{\mbox{\scriptsize \cite{#1}}}$}
+\renewcommand\arraystretch{1.4}
+
+\usepackage{amsmath}
+\usepackage{float}
+
+\numberwithin{figure}{section} % 图表按节编号
+\numberwithin{table}{section}
+\numberwithin{equation}{section}
+
+\renewcommand{\thefigure}{\thechapter-\arabic{figure}}
+\renewcommand{\thetable}{\thechapter-\arabic{table}}
+\renewcommand{\theequation}{\thechapter-\arabic{equation}}
+
+%将\listoffigures和\listoftables的标题改为中文，可以在附录中直接使用这两个命令生成图片列表和表格列表
+\renewcommand{\listfigurename}{插图列表}
+\renewcommand{\listtablename}{表格列表}
+
+\usepackage{float}
+\setlength{\textfloatsep}{25pt plus 1.0pt minus 2.0pt}
+\setlength{\floatsep}{25pt plus 1.0pt minus 2.0pt}
+\setlength{\intextsep}{25pt plus 1.0pt minus 2.0pt}
+
+\setlength{\bibsep}{0em} % 设置参考文献条目间的距离
 %------------------------------------------------------------------------------%
 
 \endinput
